@@ -1922,9 +1922,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what an RDBMS is including details the parts of its databases.
+RDBMS stands for Relational Database Management System which is a server that manages 1 or more databases. A good example of an RDBMS is PostgreSQL which allows us to interact with databases.
+
 2. What are CRUD Operations and how do they relate to SQL and Http Methods?
+CRUD stands for - Create, Read, Update, and Delete. They are ways that we can interact with databases to manipulate data that we want. CRUD operations are considered the Data Manipulation Language of SQL and they are unrelated to Http methods/were created before Http methods.
+
 3. What are examples of relationships between tables?
+Each table as a primary key and in a relationship with another table, there is a foreign key which is basically just the primary key of one table in another in order to connect them. For example if you have a user table and a user email table with a user id foreign key, that foreign key coming from the user table represents the relationship between those two tables.
+
 4. Explain the uses and differences of Spring JPA, Spring Data, and Hibernate.
+Spring JPA, Spring Data, and Hibernate all work together to help create the data base and to allow us to interact with it. The JPA - Java Persistence API - exists without Spring Data but used with Spring Data we can more easily implement JPA repositories. Spring Data is more of the full encompassing tool to make accessing data easier. Hibernate provides reference to the Spring Data JPA implementation, so all of them working together is really helpful and powerful.
 
 ## Instructions
 
@@ -2033,7 +2040,7 @@ In your solution, it is essential that you follow best practices and produce cle
 ### Task 3: Stretch Goals
 
 - [ ] Add the endpoint GET /users/user/{username}/todos - returns in created date (from auditing fields) order all of the todos that have not yet been completed for the user with the given the username. In other words, what does this user still need to do?
-  
+
 - [ ] Add in 100 more random users each with a random number (0 - 3) of random todos. The todos descriptions should be something random as well. For my example, I picked Pokemon names!
-  
+
 - [ ] Add Default Swagger Documentation
