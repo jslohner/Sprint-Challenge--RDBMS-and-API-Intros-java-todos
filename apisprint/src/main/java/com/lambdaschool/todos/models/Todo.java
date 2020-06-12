@@ -62,19 +62,33 @@ public class Todo extends Auditable {
 		this.user = user;
 	}
 
+	// public String getCreatedBy() {
+	// 	return createdby;
+	// }
+
 	public Date getCreatedDate() {
 		return createddate;
 	}
 
+	// public String getLastModifiedBy() {
+	// 	return lastmodifiedby;
+	// }
+	//
+	// public Date getLastModifiedDate() {
+	// 	return lastmodifieddate;
+	// }
+
 	@Override
 	public String toString() {
-		return
-			"Todo{" +
-			"createddate=" + createddate +
-			", todoid=" + todoid +
+		return "Todo{" +
+			"todoid=" + todoid +
 			", description='" + description + '\'' +
 			", completed=" + completed +
 			", user=" + user +
+			// ", createdby='" + createdby + '\'' +
+			", createddate=" + createddate +
+			// ", lastmodifiedby='" + lastmodifiedby + '\'' +
+			// ", lastmodifieddate=" + lastmodifieddate +
 			'}';
 	}
 }
