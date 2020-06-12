@@ -80,4 +80,17 @@ public class User extends Auditable {
 	public void setTodos(List<Todo> todos) {
 		this.todos = todos;
 	}
+
+	@Override
+	public String toString() {
+		return
+			"User{" +
+			"userid=" + userid +
+			", createddate=" + createddate +
+			", username='" + username + '\'' +
+			", primaryemail='" + primaryemail + '\'' +
+			", password='" + password + '\'' +
+			", todos=" + todos +
+			'}';
+	}
 }
