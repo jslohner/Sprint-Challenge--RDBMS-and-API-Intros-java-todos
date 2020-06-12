@@ -32,6 +32,11 @@ public class UserController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 
+	@GetMapping(value = "/users/todos", produces = {"application/json"})
+	public ResponseEntity<?> getTodoCount() {
+		return new ResponseEntity<>(userService.getCountUserTodos(), HttpStatus.OK);
+	}
+
 	@PostMapping(value = "/user", consumes = {"application/json"})
 	public ResponseEntity<?> addNewUser(@Valid @RequestBody User newuser) throws URISyntaxException {
 		newuser.setUserid(0);

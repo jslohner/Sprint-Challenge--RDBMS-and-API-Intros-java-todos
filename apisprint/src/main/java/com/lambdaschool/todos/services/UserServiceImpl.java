@@ -3,6 +3,7 @@ package com.lambdaschool.todos.services;
 import com.lambdaschool.todos.models.Todo;
 import com.lambdaschool.todos.models.User;
 import com.lambdaschool.todos.repositories.UserRepo;
+import com.lambdaschool.todos.views.UserCountTodos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,6 +34,11 @@ public class UserServiceImpl implements UserService {
 		return userrepo
 			.findById(id)
 			.orElseThrow(() -> new EntityNotFoundException("User " + id + " Not Found"));
+	}
+
+	@Override
+	public List<UserCountTodos> getCountUserTodos() {
+		return userrepo.getCountUserTodos();
 	}
 
 	@Transactional
