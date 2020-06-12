@@ -39,10 +39,10 @@ public class UserController {
 
 		HttpHeaders responseHeaders = new HttpHeaders();
 		URI newUserURI = ServletUriComponentsBuilder
-							.fromCurrentRequest()
-							.path("/{userid}")
-							.buildAndExpand(newuser.getUserid())
-							.toUri();
+			.fromCurrentRequest()
+			.path("/{userid}")
+			.buildAndExpand(newuser.getUserid())
+			.toUri();
 		responseHeaders.setLocation(newUserURI);
 
 		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
