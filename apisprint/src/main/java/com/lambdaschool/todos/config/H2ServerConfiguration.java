@@ -1,4 +1,4 @@
-package com.lambdaschool.apisprint.config;
+package com.lambdaschool.todos.config;
 
 import org.h2.tools.Server;
 import org.springframework.beans.factory.annotation.Value;

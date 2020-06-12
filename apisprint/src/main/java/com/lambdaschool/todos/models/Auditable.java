@@ -1,4 +1,4 @@
-package com.lambdaschool.apisprint.models;
+package com.lambdaschool.todos.models;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;

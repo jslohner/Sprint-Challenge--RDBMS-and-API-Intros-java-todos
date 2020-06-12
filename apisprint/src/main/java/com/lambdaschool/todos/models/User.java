@@ -1,4 +1,4 @@
-package com.lambdaschool.apisprint.models;
+package com.lambdaschool.todos.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-// import javax.val
 
 @Entity
 @Table(name = "users")
@@ -33,7 +32,7 @@ public class User extends Auditable {
 	public User() {
 	}
 
-	public User(String username, String primaryemail, String password) {
+	public User(String username, String password, String primaryemail) {
 		this.username = username;
 		this.primaryemail = primaryemail;
 		this.password = password;

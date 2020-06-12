@@ -1,4 +1,4 @@
-package com.lambdaschool.apisprint.models;
+package com.lambdaschool.todos.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -24,9 +24,8 @@ public class Todo extends Auditable {
 	public Todo() {
 	}
 
-	public Todo(String description, boolean completed, User user) {
+	public Todo(User user, String description) {
 		this.description = description;
-		this.completed = completed;
 		this.user = user;
 	}
 
@@ -62,5 +61,3 @@ public class Todo extends Auditable {
 		this.user = user;
 	}
 }
-
-// completed boolean. Note that for all new todos, default completed to false
