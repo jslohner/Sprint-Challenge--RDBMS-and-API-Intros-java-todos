@@ -1,7 +1,6 @@
 package com.lambdaschool.todos.controllers;
 
 import com.lambdaschool.todos.models.Todo;
-import com.lambdaschool.todos.models.User;
 import com.lambdaschool.todos.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -32,5 +31,11 @@ public class TodoController {
 		responseHeaders.setLocation(newTodoURI);
 
 		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
+	}
+
+	@PatchMapping(value = "/todo/{todoid}")
+	public ResponseEntity<?> toggleTodoCompleted(@PathVariable long todoid) {
+		todoService.update(todoid);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 }
