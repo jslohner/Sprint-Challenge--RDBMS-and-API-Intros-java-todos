@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -13,6 +14,8 @@ public class User extends Auditable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long userid;
+
+	private Date createddate;
 
 	@Column(nullable = false, unique = true)
 	private String username;

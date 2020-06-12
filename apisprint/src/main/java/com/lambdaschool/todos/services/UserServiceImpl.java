@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,13 @@ public class UserServiceImpl implements UserService {
 			.iterator()
 			.forEachRemaining(allUsers::add);
 		return allUsers;
+	}
+
+	@Override
+	public User findUserById(long id) throws EntityNotFoundException {
+		return userrepo
+			.findById(id)
+			.orElseThrow(() -> new EntityNotFoundException("User " + id + " Not Found"));
 	}
 
 	@Transactional
